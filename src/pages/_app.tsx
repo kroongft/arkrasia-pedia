@@ -1,17 +1,17 @@
-import GlobalStyle from '@/styles/GlobalStyle'
-import theme from '@/styles/theme'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
+import { NextUIProvider } from '@nextui-org/react'
+import './global.css'
+import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
   return (
-    <ThemeProvider theme={theme}>
+    <NextUIProvider navigate={router.push}>
       <Head>
         <title>아크라시아 대백과</title>
       </Head>
-      <GlobalStyle />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </NextUIProvider>
   )
 }
