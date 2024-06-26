@@ -5,8 +5,11 @@ interface AppLayoutProps {
 }
 function AppLayout({ children }: AppLayoutProps) {
   return (
-    <div className="flex justify-center">
-      <div className="max-w-[1200px] w-full">{children}</div>
+    <div
+      className="flex justify-center"
+      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
+    >
+      <div className="max-w-[860px] w-full">{children}</div>
     </div>
   )
 }
