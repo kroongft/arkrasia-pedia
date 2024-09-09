@@ -9,7 +9,7 @@ interface TopCardProps {
 function TopCard(props: TopCardProps) {
   const { profile } = props
   return (
-    <Card className="w-full h-[300px] bg-[#15181d] relative flex flex-row">
+    <Card className="w-full h-[300px] bg-[#15181d] relative flex flex-row rounded-none">
       <Image
         alt={profile.CharacterName}
         removeWrapper
@@ -69,7 +69,8 @@ function TopCard(props: TopCardProps) {
         </div>
       </div>
       <div className="z-3 w-[250px] absolute top-20 right-[-15px] rotate-[14deg] opacity-10">
-        <img
+        <Image
+          className="w-full"
           alt={profile.CharacterClassName}
           src={`/images/class/${profile.CharacterClassName}.svg`}
         />
