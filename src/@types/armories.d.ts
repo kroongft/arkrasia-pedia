@@ -10,12 +10,12 @@ export type ArmoriesKeyType =
   | 'collectibles'
 
 export interface Armory {
-  ArmoryAvatars: ArmoryAvatar[]
-  ArmoryCard: ArmoryCard
+  ArmoryAvatars: ArmoryAvatar[] | null
+  ArmoryCard: ArmoryCard | null
   ArmoryProfile: ArmoryProfile
-  ArmoryEngraving: ArmoryEngraving
+  ArmoryEngraving: ArmoryEngraving | null
   ArmoryEquipment: Equipment[]
-  ArmoryGem: ArmoryGem
+  ArmoryGem: ArmoryGem | null
   ArmorySkills: ArmorySkill[]
   Collectibles: Collectible[]
   ColosseumInfo: ColosseumInfo
