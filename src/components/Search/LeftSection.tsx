@@ -4,7 +4,7 @@ import React from 'react'
 
 interface LeftSecctionProps {
   profile: ArmoryProfile
-  engraving: ArmoryEngraving
+  engraving: ArmoryEngraving | null
 }
 
 function LeftSection(props: LeftSecctionProps) {
@@ -41,7 +41,7 @@ function LeftSection(props: LeftSecctionProps) {
       </Card>
       <Card radius="lg" className="p-4">
         <div className="flex flex-col gap-1">
-          {engraving.Effects.map((effect) => (
+          {engraving?.Effects.map((effect) => (
             <div className="flex gap-1 items-center" key={effect.Name}>
               <Image
                 radius="sm"
